@@ -11,7 +11,7 @@ import UIKit
 class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   @IBOutlet weak var exploreTableView: UITableView!
-  var routes = ["1", "2", "3"]
+  var routes = RoutesListViewModel().loadPopularRoutes()
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -25,7 +25,7 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
   
   //TableView Setup
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 0
+    return self.routes.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -33,11 +33,15 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     let cell = tableView.dequeueReusableCell(withIdentifier: "RouteTileCell", for: indexPath)
     let routeViewModel = routes[indexPath.row]
     
-    cell.textLabel?.text = self.routes[indexPath.row]
+    cell.textLabel?.text = routeViewModel.titleText
+    loadTableCellImage(cell, photoURL: routeViewModel.photoURL)
     
     return cell
   }
   
+  func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    print("You selected \(indexPath.row)")
+  }
   
 
 }
