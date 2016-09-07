@@ -34,7 +34,7 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     let routeViewModel = routes[indexPath.row]
     
     cell.textLabel?.text = routeViewModel.titleText
-    loadTableCellImage(cell, photoURL: routeViewModel.photoURL)
+    loadTableCellImage(cell: cell, photoURL: routeViewModel.photoURL)
     
     return cell
   }
@@ -43,6 +43,22 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     print("You selected \(indexPath.row)")
   }
   
-
+  func loadTableCellImage(cell: UITableViewCell, photoURL: NSURL?) {
+    DispatchQueue.global().async {
+      guard let imageURL = photoURL, let imageData = NSData(contentsOf: imageURL as URL) else {
+        return
+      }
+      DispatchQueue.main.async {
+        cell.imageView?.image = UIImage(data: imageData as Data)
+        cell.setNeedsLayout()
+      }
+    }
+  }
+  
 }
+
+
+
+    
+
 

@@ -13,6 +13,7 @@
 		96AB3CF01D80BE03004B1BFF /* RouteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB3CEF1D80BE03004B1BFF /* RouteViewModel.swift */; };
 		96AB3CF31D80BE6C004B1BFF /* RoutesAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB3CF21D80BE6C004B1BFF /* RoutesAPIManager.swift */; };
 		96AB3CF51D80BFD4004B1BFF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB3CF41D80BFD4004B1BFF /* UIImage.swift */; };
+		96AB3CF81D80C150004B1BFF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB3CF71D80C150004B1BFF /* Colors.swift */; };
 		96DC43E51D805A3D00B01B94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DC43E41D805A3D00B01B94 /* AppDelegate.swift */; };
 		96DC43E71D805A3D00B01B94 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DC43E61D805A3D00B01B94 /* ExploreViewController.swift */; };
 		96DC43EA1D805A3D00B01B94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96DC43E81D805A3D00B01B94 /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		96AB3CEF1D80BE03004B1BFF /* RouteViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteViewModel.swift; sourceTree = "<group>"; };
 		96AB3CF21D80BE6C004B1BFF /* RoutesAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesAPIManager.swift; sourceTree = "<group>"; };
 		96AB3CF41D80BFD4004B1BFF /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		96AB3CF71D80C150004B1BFF /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		96DC43E11D805A3D00B01B94 /* VersionTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VersionTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DC43E41D805A3D00B01B94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96DC43E61D805A3D00B01B94 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
@@ -115,12 +117,13 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		96AB3CF61D80C01E004B1BFF /* UI Extensions */ = {
+		96AB3CF61D80C01E004B1BFF /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				96AB3CF41D80BFD4004B1BFF /* UIImage.swift */,
+				96AB3CF71D80C150004B1BFF /* Colors.swift */,
 			);
-			name = "UI Extensions";
+			name = UI;
 			sourceTree = "<group>";
 		};
 		96DC43D81D805A3D00B01B94 = {
@@ -153,7 +156,7 @@
 				96AB3CF11D80BE20004B1BFF /* Controllers */,
 				96AB3CEE1D80BDAF004B1BFF /* Configuration */,
 				96AB3CF21D80BE6C004B1BFF /* RoutesAPIManager.swift */,
-				96AB3CF61D80C01E004B1BFF /* UI Extensions */,
+				96AB3CF61D80C01E004B1BFF /* UI */,
 			);
 			path = VersionTwo;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96AB3CF01D80BE03004B1BFF /* RouteViewModel.swift in Sources */,
+				96AB3CF81D80C150004B1BFF /* Colors.swift in Sources */,
 				96AB3CF51D80BFD4004B1BFF /* UIImage.swift in Sources */,
 				96DC44131D805AB100B01B94 /* Route.swift in Sources */,
 				96AB3CF31D80BE6C004B1BFF /* RoutesAPIManager.swift in Sources */,
