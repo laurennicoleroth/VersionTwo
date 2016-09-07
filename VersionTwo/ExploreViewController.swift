@@ -37,6 +37,8 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     return cell
   }
+  
+  
 
 }
 
