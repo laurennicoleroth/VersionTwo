@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class RouteAPIManager {
   
@@ -15,9 +16,7 @@ class RouteAPIManager {
   var baseURL = Config.sharedInstance.mobileAPIEndpoint()
   
   func getPopularRoutes() -> [RouteViewModel] {
-    
-    print("This is the baseURL currently in use: \(baseURL)")
-    
+
     let routes: [RouteViewModel] = {
       let boston = Route(title: "Going to Boston", photoURL: "https://s3.amazonaws.com/skedaddle-production/uploads/2e38ac30-e324-4bb2-95da-73d64f7f6f16/image-24.jpg")
       let toronto = Route(title: "Going to Toronto", photoURL: "https://s3.amazonaws.com/skedaddle-production/uploads/08aa2c57-9703-4db7-8af9-9aef9e945b8d/image-18.jpg")
