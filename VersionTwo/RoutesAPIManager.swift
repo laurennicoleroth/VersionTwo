@@ -7,15 +7,34 @@
 //
 
 import Foundation
+import Alamofire
+import SwiftyJSON
 
 class RouteAPIManager {
   
   static let sharedInstance = RouteAPIManager()
-  
   var baseURL = Config.sharedInstance.mobileAPIEndpoint()
   
-  func getPopularRoutes() -> [RouteViewModel] {
-
+  func getEventsFromSearch(query: AnyObject, userLocation: AnyObject, completionHandler: (Result<Route>) -> Void) {
+    let parameters = ["": ""]
+    Alamofire.request(baseURL+"events", parameters: parameters)
+  }
+  
+  func getPopularRoutes(completion: @escaping (JSON) -> () ) -> [RouteViewModel] {
+    
+    Alamofire.request(baseURL+"events", method: .get)
+      .validate()
+      .responseJSON { response in
+        print("Response: \(response.result)")
+        switch response.result {
+        case .success:
+          completion(JSON(data: response.data!))
+        case .failure:
+          print("Failure: \(response.result.error)")
+        }
+    }
+  
+  
     let routes: [RouteViewModel] = {
       let boston = Route(title: "Going to Boston", photoURL: "https://s3.amazonaws.com/skedaddle-production/uploads/2e38ac30-e324-4bb2-95da-73d64f7f6f16/image-24.jpg")
       let toronto = Route(title: "Going to Toronto", photoURL: "https://s3.amazonaws.com/skedaddle-production/uploads/08aa2c57-9703-4db7-8af9-9aef9e945b8d/image-18.jpg")

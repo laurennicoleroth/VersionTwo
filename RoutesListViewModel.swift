@@ -13,7 +13,10 @@ public class RoutesListViewModel {
   var routes = [RouteViewModel]()
   
   func loadPopularRoutes() -> [RouteViewModel] {
-    routes = RouteAPIManager.sharedInstance.getPopularRoutes()
+    routes = RouteAPIManager.sharedInstance.getPopularRoutes() { response in
+      print("This is the response, yo: \(response)")
+      
+    }
     return routes
   }
   
