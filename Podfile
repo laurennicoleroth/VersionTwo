@@ -6,7 +6,11 @@ target 'VersionTwo' do
   pod 'Alamofire',
     :git => 'https://github.com/Alamofire/Alamofire.git',
     :branch => 'swift3'
- 
+  
+  pod 'SwiftyJSON', 
+    :git => 'https://github.com/acegreen/SwiftyJSON',
+    :branch => 'swift3'
+
   target 'VersionTwoTests' do
     inherit! :search_paths
     # Pods for testing
