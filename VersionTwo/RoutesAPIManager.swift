@@ -15,6 +15,9 @@ class RouteAPIManager {
   var baseURL = Config.sharedInstance.mobileAPIEndpoint()
   
   func getPopularRoutes() -> [RouteViewModel] {
+    
+    print("This is the baseURL currently in use: \(baseURL)")
+    
     let routes: [RouteViewModel] = {
       let boston = Route(title: "Going to Boston", photoURL: "https://s3.amazonaws.com/skedaddle-production/uploads/2e38ac30-e324-4bb2-95da-73d64f7f6f16/image-24.jpg")
       let toronto = Route(title: "Going to Toronto", photoURL: "https://s3.amazonaws.com/skedaddle-production/uploads/08aa2c57-9703-4db7-8af9-9aef9e945b8d/image-18.jpg")
@@ -26,7 +29,7 @@ class RouteAPIManager {
       let miami = Route(title: "Going to Miami", photoURL: "https://s3.amazonaws.com/skedaddle-production/uploads/08aa2c57-9703-4db7-8af9-9aef9e945b8d/image-18.jpg")
       let portland = Route(title: "Going to Portland", photoURL: "https://s3.amazonaws.com/skedaddle-production/uploads/5138b799-9363-4aa7-b909-49e4d5bac5ad/image-26.jpg")
       
-      return [RouteViewModel(route: boston), RouteViewModel(route: toronto), RouteViewModel(route: cape_cod), RouteViewModel(route: tetons), RouteViewModel(route: boulder), RouteViewModel(route: cape_cod), RouteViewModel(route: los_angeles), RouteViewModel(route: chicago), RouteViewModel(route: portland)]
+      return [RouteViewModel(route: boston), RouteViewModel(route: toronto), RouteViewModel(route: cape_cod), RouteViewModel(route: tetons), RouteViewModel(route: boulder), RouteViewModel(route: miami), RouteViewModel(route: los_angeles), RouteViewModel(route: chicago), RouteViewModel(route: portland)]
     }()
     
     return routes
