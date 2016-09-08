@@ -15,7 +15,8 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
   
   override func viewDidLoad() {
     super.viewDidLoad()
-
+  
+    self.exploreTableView.register(UITableViewCell.self, forCellReuseIdentifier: "RouteTileCell")
   }
 
   override func didReceiveMemoryWarning() {
@@ -30,8 +31,10 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
-    let cell = tableView.dequeueReusableCell(withIdentifier: "RouteTileCell", for: indexPath)
+    let cell = exploreTableView.dequeueReusableCell(withIdentifier: "RouteTileCell", for: indexPath)
     let routeViewModel = routes[indexPath.row]
+    
+    print(routeViewModel.titleText)
     
     cell.textLabel?.text = routeViewModel.titleText
     loadTableCellImage(cell: cell, photoURL: routeViewModel.photoURL)
