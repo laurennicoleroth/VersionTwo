@@ -1,15 +1,20 @@
 PODS:
   - Alamofire (4.0.0-beta.2)
+  - Locksmith (2.0.8)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `swift3`)
+  - Locksmith (from `https://github.com/pascalfribi/Locksmith.git`, branch `swift-3.0`)
   - SwiftyJSON (from `https://github.com/acegreen/SwiftyJSON`, branch `swift3`)
 
 EXTERNAL SOURCES:
   Alamofire:
     :branch: swift3
     :git: https://github.com/Alamofire/Alamofire.git
+  Locksmith:
+    :branch: swift-3.0
+    :git: https://github.com/pascalfribi/Locksmith.git
   SwiftyJSON:
     :branch: swift3
     :git: https://github.com/acegreen/SwiftyJSON
@@ -18,14 +23,18 @@ CHECKOUT OPTIONS:
   Alamofire:
     :commit: 680690beaa7abf9578487688de4d24d038f679b5
     :git: https://github.com/Alamofire/Alamofire.git
+  Locksmith:
+    :commit: 818938df8145ab67c9d5c26956999439acca34f9
+    :git: https://github.com/pascalfribi/Locksmith.git
   SwiftyJSON:
     :commit: 8971384559780e631b041ac91b16734a396d4c14
     :git: https://github.com/acegreen/SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: 7f837be535fe424db2b87d9117f13836939719ca
+  Locksmith: a8ed41ac4c06506ea8cb199d8ec8a8d3d108eb2a
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 06eb3431ac089cd901143e7849b7f93294a94075
+PODFILE CHECKSUM: b393835f5ab7343de011b0a795f852a7442c5071
 
 COCOAPODS: 1.0.1

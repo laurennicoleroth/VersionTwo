@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import Locksmith
 
 class RouteAPIManager {
   
@@ -17,11 +18,6 @@ class RouteAPIManager {
   
   var baseURL = Config.sharedInstance.mobileAPIEndpoint()
   
-  var AuthToken: String? {
-    set {
-      if let 
-    }
-  }
   
   func getEventsFromSearch(query: AnyObject, userLocation: AnyObject, completionHandler: (Result<Route>) -> Void) {
     /*

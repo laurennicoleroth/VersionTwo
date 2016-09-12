@@ -11,6 +11,10 @@ target 'VersionTwo' do
     :git => 'https://github.com/acegreen/SwiftyJSON',
     :branch => 'swift3'
 
+  pod 'Locksmith',
+      :git => 'https://github.com/pascalfribi/Locksmith.git',
+      :branch => 'swift-3.0'
+
   target 'VersionTwoTests' do
     inherit! :search_paths
     # Pods for testing
