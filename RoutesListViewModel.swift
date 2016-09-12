@@ -15,7 +15,6 @@ public class RoutesListViewModel {
   func loadPopularRoutes() -> [RouteViewModel] {
     routes = RouteAPIManager.sharedInstance.getPopularRoutes() { response in
       print("This is the response, yo: \(response)")
-      
     }
     return routes
   }

@@ -17,6 +17,8 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     super.viewDidLoad()
   
     self.exploreTableView.register(UITableViewCell.self, forCellReuseIdentifier: "RouteTileCell")
+    
+    RouteAPIManager.sharedInstance.popular()
   }
 
   override func didReceiveMemoryWarning() {
