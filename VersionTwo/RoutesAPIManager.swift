@@ -18,6 +18,27 @@ class RouteAPIManager {
   
   var baseURL = Config.sharedInstance.mobileAPIEndpoint()
   
+  var OAuthToken: String? {
+    set {
+      guard let newValue = newValue else {
+        let _ = try? Locksmith.saveData(data: ["some key": "some value"], forUserAccount: "myUserAccount")
+        return
+      }
+      
+      guard let _ = try? Locksmith.updateData(data: ["token": newValue], forUserAccount: "github") else {
+        let _ = try? Locksmith.deleteDataForUserAccount(userAccount: "github")
+        return
+      }
+    }
+    get {
+      // try to load from keychain
+      Locksmith.loadDataForUserAccount(userAccount: "github")
+      let dictionary = Locksmith.loadDataForUserAccount(userAccount: "github")
+      return dictionary?["token"] as? String
+    }
+  }
+
+  
   
   func getEventsFromSearch(query: AnyObject, userLocation: AnyObject, completionHandler: (Result<Route>) -> Void) {
     /*
