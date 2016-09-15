@@ -14,47 +14,30 @@ import Locksmith
 class RouteAPIManager {
   
   static let sharedInstance = RouteAPIManager()
-  let sessionManager = Alamofire.SessionManager
-  
   var baseURL = Config.sharedInstance.mobileAPIEndpoint()
-  
+  let sessionManager = Alamofire.SessionManager
+
   var OAuthToken: String? {
     set {
-      guard let newValue = newValue else {
-        let _ = try? Locksmith.saveData(data: ["some key": "some value"], forUserAccount: "myUserAccount")
-        return
-      }
-      
-      guard let _ = try? Locksmith.updateData(data: ["token": newValue], forUserAccount: "github") else {
-        let _ = try? Locksmith.deleteDataForUserAccount(userAccount: "github")
-        return
+      if let valueToSave = newValue {
+        do {
+          //things
+          try Locksmith.saveData(data: ["token": valueToSave], forUserAccount: "skedaddle")
+        } catch {
+          let _ = try? Locksmith.deleteDataForUserAccount(userAccount: "skedaddle")
+        }
+        
       }
     }
     get {
-      // try to load from keychain
-      Locksmith.loadDataForUserAccount(userAccount: "github")
-      let dictionary = Locksmith.loadDataForUserAccount(userAccount: "github")
-      return dictionary?["token"] as? String
+      return OAuthToken
     }
   }
-
   
-  
-  func getEventsFromSearch(query: AnyObject, userLocation: AnyObject, completionHandler: (Result<Route>) -> Void) {
-    /*
-     let parameters = ["": ""]
-      Alamofire.request(baseURL+"events", parameters: parameters)
-     }
-  
-  func popular(userLocation: AnyObject, completionHandler: (Result<[Event]>) -> Void) {
-    var token = ""
-
-    Alamofire.request(.GET, baseUrl+"events", parameters: ["filter":"popular", "user_location": userLocation], headers: ["Authorization": "Token \(token)"])
-      .validate()
-      .responseArray { (request, response, result: Result<[Event]>) in
-        completionHandler(result)
-    } 
-     */
+  init() {
+    let manager = Alamofire.SessionManager
+    
+    print(manager)
   }
   
   func popular() {
