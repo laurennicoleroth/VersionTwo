@@ -16,6 +16,7 @@
 		96AB3CF31D80BE6C004B1BFF /* RoutesAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB3CF21D80BE6C004B1BFF /* RoutesAPIManager.swift */; };
 		96AB3CF51D80BFD4004B1BFF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB3CF41D80BFD4004B1BFF /* UIImage.swift */; };
 		96AB3CF81D80C150004B1BFF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB3CF71D80C150004B1BFF /* Colors.swift */; };
+		96CC5FD11D8B3EB30068D957 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CC5FD01D8B3EB30068D957 /* User.swift */; };
 		96DC43E51D805A3D00B01B94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DC43E41D805A3D00B01B94 /* AppDelegate.swift */; };
 		96DC43E71D805A3D00B01B94 /* ExploreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96DC43E61D805A3D00B01B94 /* ExploreViewController.swift */; };
 		96DC43EA1D805A3D00B01B94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96DC43E81D805A3D00B01B94 /* Main.storyboard */; };
@@ -60,6 +61,7 @@
 		96AB3CF21D80BE6C004B1BFF /* RoutesAPIManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesAPIManager.swift; sourceTree = "<group>"; };
 		96AB3CF41D80BFD4004B1BFF /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		96AB3CF71D80C150004B1BFF /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		96CC5FD01D8B3EB30068D957 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		96DC43E11D805A3D00B01B94 /* VersionTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VersionTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96DC43E41D805A3D00B01B94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		96DC43E61D805A3D00B01B94 /* ExploreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreViewController.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				96DC44121D805AB100B01B94 /* Route.swift */,
+				96CC5FD01D8B3EB30068D957 /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				96AB3CE81D80B634004B1BFF /* Config.swift in Sources */,
 				96AB3CEC1D80BD83004B1BFF /* RoutesListViewModel.swift in Sources */,
 				96DC43E71D805A3D00B01B94 /* ExploreViewController.swift in Sources */,
+				96CC5FD11D8B3EB30068D957 /* User.swift in Sources */,
 				96DC43E51D805A3D00B01B94 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

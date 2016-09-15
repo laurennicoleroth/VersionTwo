@@ -32,7 +32,6 @@
 		8C36E11ACE12936C36A6A2FA19187A77 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CD91C635C86E4827C5B1AC163249769 /* ParameterEncoding.swift */; };
 		8FEC8187EA7257215942CE631B2D42F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D692051EF32C02A74F6A5706D54B828B /* Foundation.framework */; };
 		92160C1C086F74971EF5A732F1E9089A /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25EEFEBBA7BFB74CC5BC3DD4413DF203 /* Alamofire.swift */; };
-		96CC5FCD1D8B03480068D957 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CC5FCC1D8B03480068D957 /* Router.swift */; };
 		A4705DAF89DBD7FCC6D6F787AFF27BBA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D692051EF32C02A74F6A5706D54B828B /* Foundation.framework */; };
 		AA6942D0BB9D839F99CF42783EEA8ED4 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8269AADEC33BD7DA0149EF732629B462 /* SessionManager.swift */; };
 		B830A0872D5556832630D4C1C0A9166D /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F9EBDC620D3555D7C613C2A8F319A /* Validation.swift */; };
@@ -131,7 +130,6 @@
 		924B62A49CC23D4AD8C796C91C6F83F5 /* Pods-VersionTwoTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VersionTwoTests-resources.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		94F1CA68C54D6EDAE7745511B67851BF /* Pods-VersionTwoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VersionTwoUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		96CC5FCC1D8B03480068D957 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9849607C02F61F647C63DD8D0C0A6476 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
 		98D2ADE2F193A1A624E70FAFCB177286 /* Locksmith.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Locksmith.h; path = Source/Locksmith.h; sourceTree = "<group>"; };
 		9B63E114A924BD875CBAA446635F7117 /* Locksmith.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Locksmith.modulemap; sourceTree = "<group>"; };
@@ -382,7 +380,6 @@
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				96CC5FCC1D8B03480068D957 /* Router.swift */,
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
 				90363F8D833F7485F23DCF8C7C6424AC /* Pods */,
@@ -662,7 +659,6 @@
 				30FE2D5EE1A647934F1022A918A5CD64 /* DispatchQueue+Alamofire.swift in Sources */,
 				DDEA45F7A74290924220D3F4E5D75970 /* MultipartFormData.swift in Sources */,
 				09E17CBC415A313540FB9FDDE13CAE5A /* NetworkReachabilityManager.swift in Sources */,
-				96CC5FCD1D8B03480068D957 /* Router.swift in Sources */,
 				3B2A9B56014D42E34D9B97EB9B20E586 /* Notifications.swift in Sources */,
 				8C36E11ACE12936C36A6A2FA19187A77 /* ParameterEncoding.swift in Sources */,
 				C5C6700B22B77172E0BC43A8029CE857 /* Request.swift in Sources */,
