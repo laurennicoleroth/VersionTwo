@@ -20,7 +20,7 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
   
     self.exploreTableView.register(UITableViewCell.self, forCellReuseIdentifier: "RouteTileCell")
     
-    currentUser.getLatestLocation()
+    RouteAPIManager.sharedInstance.popular()
   }
 
   override func didReceiveMemoryWarning() {

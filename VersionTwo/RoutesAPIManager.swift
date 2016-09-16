@@ -16,28 +16,33 @@ class RouteAPIManager {
   static let sharedInstance = RouteAPIManager()
   var baseURL = Config.sharedInstance.mobileAPIEndpoint()
   
-  func popular(userLocation: AnyObject) {
+  func popular() {
     
-    Alamofire.request(baseURL+"events").response { response in // method defaults to `.get`
-      debugPrint(response)
+    let urlString = baseURL+"routes"
+    print(urlString)
+    
+    Alamofire.request(urlString, method: .get, encoding: JSONEncoding.default)
+      .downloadProgress() { progress in
+        print("Progress: \(progress.fractionCompleted)")
+      }
+      .validate { request, response, data in
+        // Custom evaluation closure now includes data (allows you to parse data to dig out error messages if necessary)
+        return .success
+      }
+      .responseJSON { response in
+        
+        let json = JSON(data: response.data!)
+        print(json[0])
+        
+        if let pickUpAddress = json[0]["origin"].string {
+          let photoURL = json[0]["route_image"].string
+          print(photoURL)
+          debugPrint(pickUpAddress)
+          let firstRoute = Route(title: pickUpAddress, photoURL: photoURL!)
+          print(firstRoute)
+        }
     }
-    
     
   }
-  
- /* V1 API call:
- func getPopularEvents(userLocation: AnyObject, completionHandler: (Result<[Event]>) -> Void) {
-    var token = ""
-    //   let token = returnAuthToken()
-    if hasToken(){
-      token = returnAuthToken()
-    }
-    Alamofire.request(.GET, baseUrl+"events", parameters: ["filter":"popular", "user_location": userLocation], headers: ["Authorization": "Token \(token)"])
-      .validate()
-      .responseArray { (request, response, result: Result<[Event]>) in
-        completionHandler(result)
-    }
-  }
- */
   
 }

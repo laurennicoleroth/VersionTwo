@@ -1,40 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   Config.plist
-   VersionTwo
-
-   Created by Lauren Nicole Roth on 9/7/16.
-   Copyright (c) 2016 Skedaddle. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-  <dict>
-    <key>Development</key>
-    <dict>
-      <key>MobileAPIEndpointURL</key>
-      <string>https://staging.letskedaddle.com/mobile_api/v1/</string>
-      <key>SocketEndpointURL</key>
-      <string>https://skedaddle-realtime-bus-staging.herokuapp.com</string>
-      <key>loggingLevel</key>
-      <string>Log level Dev</string>
-    </dict>
-    <key>Staging</key>
-    <dict>
-      <key>MobileAPIEndpointURL</key>
-      <string>https://staging.letskedaddle.com/mobile_api/v1/</string>
-      <key>SocketEndpointURL</key>
-      <string>https://skedaddle-realtime-bus-staging.herokuapp.com</string>
-      <key>loggingLevel</key>
-      <string>Log level Stg</string>
-    </dict>
-    <key>Production</key>
-    <dict>
-      <key>MobileAPIEndpointURL</key>
-      <string>https://www.letskedaddle.com/mobile_api/v1/</string>
-      <key>SocketEndpointURL</key>
-      <string>https://bustracking.letskedaddle.com/</string>
-      <key>loggingLevel</key>
-      <string>Log level Prod</string>
-    </dict>
-  </dict>
+<dict>
+	<key>Development</key>
+	<dict>
+		<key>MobileAPIEndpointURL</key>
+		<string>https://staging.letskedaddle.com/mobile_api/v2/</string>
+		<key>SocketEndpointURL</key>
+		<string>https://skedaddle-realtime-bus-staging.herokuapp.com</string>
+		<key>loggingLevel</key>
+		<string>Log level Dev</string>
+	</dict>
+	<key>Staging</key>
+	<dict>
+		<key>MobileAPIEndpointURL</key>
+		<string>https://staging.letskedaddle.com/mobile_api/v2/</string>
+		<key>SocketEndpointURL</key>
+		<string>https://skedaddle-realtime-bus-staging.herokuapp.com</string>
+		<key>loggingLevel</key>
+		<string>Log level Stg</string>
+	</dict>
+	<key>Production</key>
+	<dict>
+		<key>MobileAPIEndpointURL</key>
+		<string>https://www.letskedaddle.com/mobile_api/v2/</string>
+		<key>SocketEndpointURL</key>
+		<string>https://bustracking.letskedaddle.com/</string>
+		<key>loggingLevel</key>
+		<string>Log level Prod</string>
+	</dict>
+</dict>
 </plist>
