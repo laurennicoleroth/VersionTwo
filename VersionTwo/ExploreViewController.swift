@@ -7,18 +7,20 @@
 //
 
 import UIKit
+import SwiftLocation
 
 class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   @IBOutlet weak var exploreTableView: UITableView!
   var routes = RoutesListViewModel().loadPopularRoutes()
+  let currentUser = User.init()
   
   override func viewDidLoad() {
     super.viewDidLoad()
   
     self.exploreTableView.register(UITableViewCell.self, forCellReuseIdentifier: "RouteTileCell")
     
-    RouteAPIManager.sharedInstance.popular(userLocation: )
+    currentUser.getLatestLocation()
   }
 
   override func didReceiveMemoryWarning() {

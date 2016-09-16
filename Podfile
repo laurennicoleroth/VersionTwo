@@ -15,6 +15,8 @@ target 'VersionTwo' do
       :git => 'https://github.com/pascalfribi/Locksmith.git',
       :branch => 'swift-3.0'
 
+  pod 'SwiftLocation', '~> 1.1'
+
   target 'VersionTwoTests' do
     inherit! :search_paths
     # Pods for testing

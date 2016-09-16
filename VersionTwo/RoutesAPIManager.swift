@@ -25,4 +25,19 @@ class RouteAPIManager {
     
   }
   
+ /* V1 API call:
+ func getPopularEvents(userLocation: AnyObject, completionHandler: (Result<[Event]>) -> Void) {
+    var token = ""
+    //   let token = returnAuthToken()
+    if hasToken(){
+      token = returnAuthToken()
+    }
+    Alamofire.request(.GET, baseUrl+"events", parameters: ["filter":"popular", "user_location": userLocation], headers: ["Authorization": "Token \(token)"])
+      .validate()
+      .responseArray { (request, response, result: Result<[Event]>) in
+        completionHandler(result)
+    }
+  }
+ */
+  
 }
