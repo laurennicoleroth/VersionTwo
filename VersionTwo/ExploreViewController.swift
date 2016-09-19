@@ -21,10 +21,10 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
   override func viewDidLoad() {
     super.viewDidLoad()
   
-    self.exploreTableView.register(UITableViewCell.self, forCellReuseIdentifier: "RouteTileCell")
+//    self.exploreTableView.register(UITableViewCell.self, forCellReuseIdentifier: "RouteTileCell")
     
     dataSource.configureCell = { table, indexPath, user in
-      let cell = exploreTableView.dequeueReusableCellWithIdentifier("RouteTileCell", forIndexPath: indexPath)
+      let cell = table.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
       let string = "\(user.screenName) is following \(user.followingCount) users and is followed by \(user.followersCount) users."
       cell.textLabel?.text = string
       cell.textLabel?.numberOfLines = 0
@@ -32,8 +32,8 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
       return cell
     }
     
-    UserViewModel.getUsers()
-      .bindTo(tableView.rx_itemsWithDataSource(dataSource))
+    userViewModel.getUsers()
+      .bindTo(exploreTableView.rx_itemsWithDataSource(dataSource))
       .addDisposableTo(disposeBag)
   }
 
