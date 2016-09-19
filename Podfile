@@ -17,6 +17,9 @@ target 'VersionTwo' do
 
   pod 'SwiftLocation', '~> 1.1'
 
+  pod 'RxSwift',    '~> 3.0.0-beta.1'
+  pod 'RxCocoa',    '~> 3.0.0-beta.1'
+
   target 'VersionTwoTests' do
     inherit! :search_paths
     # Pods for testing

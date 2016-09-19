@@ -13,12 +13,11 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
 
   @IBOutlet weak var exploreTableView: UITableView!
 
-  let currentUser = User.init()
-  var routes = [RouteViewModel]()
-  
-  
+  var routes = RoutesListViewModel()
+
   override func viewDidLoad() {
     super.viewDidLoad()
+
     RoutesListViewModel.init().loadPopularRoutes() { response in
       print(response)
     }
@@ -33,14 +32,14 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
   //TableView Setup
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-    return self.routes.count
+//    return self.routes.count
+    return 1
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
     let cell = exploreTableView.dequeueReusableCell(withIdentifier: "RouteTileCell", for: indexPath)
-    let routeViewModel = routes[indexPath.row]
-    print(routeViewModel)
+//    let routeViewModel = routes[indexPath.row]
     
 //    cell.textLabel?.text = routeViewModel.titleText
 //    loadTableCellImage(cell: cell, photoURL: routeViewModel.photoURL)

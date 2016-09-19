@@ -1,12 +1,17 @@
 PODS:
   - Alamofire (4.0.0-beta.2)
   - Locksmith (2.0.8)
+  - RxCocoa (3.0.0-beta.1):
+    - RxSwift (~> 3.0.0-beta.1)
+  - RxSwift (3.0.0-beta.1)
   - SwiftLocation (1.1.0)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire (from `https://github.com/Alamofire/Alamofire.git`, branch `swift3`)
   - Locksmith (from `https://github.com/pascalfribi/Locksmith.git`, branch `swift-3.0`)
+  - RxCocoa (~> 3.0.0-beta.1)
+  - RxSwift (~> 3.0.0-beta.1)
   - SwiftLocation (~> 1.1)
   - SwiftyJSON (from `https://github.com/acegreen/SwiftyJSON`, branch `swift3`)
 
@@ -35,9 +40,11 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   Alamofire: 7f837be535fe424db2b87d9117f13836939719ca
   Locksmith: a8ed41ac4c06506ea8cb199d8ec8a8d3d108eb2a
+  RxCocoa: 8cecf331302b8ae5381bbab1bccba4ede2eae6a8
+  RxSwift: 0823e8d7969c23bfa9ddfb2afa4881e424a1a710
   SwiftLocation: f1bf5acb7992dd96c6f773c383f9c0479f07727d
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 292130dfae50932a30cca1c84953b87f6b2c57e4
+PODFILE CHECKSUM: cf44c19442a4831b5ad58f26fd3aff58eeca9c94
 
 COCOAPODS: 1.0.1
