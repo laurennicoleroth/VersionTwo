@@ -1,4 +1,4 @@
-platform :ios, '10.0'
+platform :ios, '10'
 
 target 'VersionTwo' do
   use_frameworks!
