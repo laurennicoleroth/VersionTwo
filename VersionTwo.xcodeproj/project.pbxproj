@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5D7D0435DAB0BFFD0C16196A /* Pods_VersionTwoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B021F62F71797C4E524EA254 /* Pods_VersionTwoUITests.framework */; };
 		8205CBD2261E139EFF0DF689 /* Pods_VersionTwo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCC2C5DEAC23C8486FF0D43D /* Pods_VersionTwo.framework */; };
+		96A8AECC1D8C95C6006BB53B /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96A8AECB1D8C95C6006BB53B /* JSONParser.swift */; };
 		96AB3CE81D80B634004B1BFF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB3CE71D80B634004B1BFF /* Config.swift */; };
 		96AB3CEA1D80B813004B1BFF /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96AB3CE91D80B813004B1BFF /* Config.plist */; };
 		96AB3CEC1D80BD83004B1BFF /* RoutesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AB3CEB1D80BD83004B1BFF /* RoutesListViewModel.swift */; };
@@ -54,6 +55,7 @@
 		79BD9F3D66150E63FBED9E48 /* Pods-VersionTwoUITests.production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VersionTwoUITests.production.xcconfig"; path = "Pods/Target Support Files/Pods-VersionTwoUITests/Pods-VersionTwoUITests.production.xcconfig"; sourceTree = "<group>"; };
 		83D4E2F7C46748642FAB24DF /* Pods-VersionTwoTests.development.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VersionTwoTests.development.xcconfig"; path = "Pods/Target Support Files/Pods-VersionTwoTests/Pods-VersionTwoTests.development.xcconfig"; sourceTree = "<group>"; };
 		8C4DA4A54A5317AA1FDE4B15 /* Pods-VersionTwoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VersionTwoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VersionTwoTests/Pods-VersionTwoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		96A8AECB1D8C95C6006BB53B /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		96AB3CE71D80B634004B1BFF /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		96AB3CE91D80B813004B1BFF /* Config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		96AB3CEB1D80BD83004B1BFF /* RoutesListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoutesListViewModel.swift; path = ../RoutesListViewModel.swift; sourceTree = "<group>"; };
@@ -148,6 +150,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		96A8AECA1D8C9593006BB53B /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				96AB3CF21D80BE6C004B1BFF /* RoutesAPIManager.swift */,
+				96A8AECB1D8C95C6006BB53B /* JSONParser.swift */,
+			);
+			name = Routes;
+			sourceTree = "<group>";
+		};
 		96AB3CED1D80BD9A004B1BFF /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,7 +226,7 @@
 				96AB3CED1D80BD9A004B1BFF /* ViewModels */,
 				96AB3CF11D80BE20004B1BFF /* Controllers */,
 				96AB3CEE1D80BDAF004B1BFF /* Configuration */,
-				96AB3CF21D80BE6C004B1BFF /* RoutesAPIManager.swift */,
+				96A8AECA1D8C9593006BB53B /* Routes */,
 				96AB3CF61D80C01E004B1BFF /* UI */,
 			);
 			path = VersionTwo;
@@ -530,6 +541,7 @@
 				96AB3CF01D80BE03004B1BFF /* RouteViewModel.swift in Sources */,
 				96AB3CF81D80C150004B1BFF /* Colors.swift in Sources */,
 				96AB3CF51D80BFD4004B1BFF /* UIImage.swift in Sources */,
+				96A8AECC1D8C95C6006BB53B /* JSONParser.swift in Sources */,
 				96DC44131D805AB100B01B94 /* Route.swift in Sources */,
 				96AB3CF31D80BE6C004B1BFF /* RoutesAPIManager.swift in Sources */,
 				96AB3CE81D80B634004B1BFF /* Config.swift in Sources */,

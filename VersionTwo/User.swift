@@ -27,8 +27,7 @@ class User {
   
     }) { (lastValidLocation, error) in
       //TODO: handle error
-      print(lastValidLocation)
-      print(error)
+      
     }
     
     debugPrint(locationRequst)

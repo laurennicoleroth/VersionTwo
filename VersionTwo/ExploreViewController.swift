@@ -12,24 +12,27 @@ import SwiftLocation
 class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   @IBOutlet weak var exploreTableView: UITableView!
-  var routes = RoutesListViewModel().loadPopularRoutes()
+
   let currentUser = User.init()
+  var routes = [RouteViewModel]()
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
-  
-    self.exploreTableView.register(UITableViewCell.self, forCellReuseIdentifier: "RouteTileCell")
+    RoutesListViewModel.init().loadPopularRoutes() { response in
+      print(response)
+    }
     
-    RouteAPIManager.sharedInstance.popular()
+    self.exploreTableView.register(UITableViewCell.self, forCellReuseIdentifier: "RouteTileCell")
   }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
-  
   }
   
   //TableView Setup
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
     return self.routes.count
   }
   
@@ -37,17 +40,16 @@ class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     let cell = exploreTableView.dequeueReusableCell(withIdentifier: "RouteTileCell", for: indexPath)
     let routeViewModel = routes[indexPath.row]
+    print(routeViewModel)
     
-    print(routeViewModel.titleText)
-    
-    cell.textLabel?.text = routeViewModel.titleText
-    loadTableCellImage(cell: cell, photoURL: routeViewModel.photoURL)
+//    cell.textLabel?.text = routeViewModel.titleText
+//    loadTableCellImage(cell: cell, photoURL: routeViewModel.photoURL)
     
     return cell
   }
   
   func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-    print("You selected \(indexPath.row)")
+    // do something with the selected row
   }
   
   func loadTableCellImage(cell: UITableViewCell, photoURL: NSURL?) {
