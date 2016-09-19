@@ -8,17 +8,33 @@
 
 import UIKit
 import SwiftLocation
+import RxSwift
+import RxDataSources
 
 class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   @IBOutlet weak var exploreTableView: UITableView!
+  let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, User>>()
+  let userViewModel = UserViewModel()
+  let disposeBag = DisposeBag()
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    let routeAPI = RouteAPIManager.sharedInstance
-    
+  
     self.exploreTableView.register(UITableViewCell.self, forCellReuseIdentifier: "RouteTileCell")
+    
+    dataSource.configureCell = { table, indexPath, user in
+      let cell = exploreTableView.dequeueReusableCellWithIdentifier("RouteTileCell", forIndexPath: indexPath)
+      let string = "\(user.screenName) is following \(user.followingCount) users and is followed by \(user.followersCount) users."
+      cell.textLabel?.text = string
+      cell.textLabel?.numberOfLines = 0
+      cell.backgroundColor = indexPath.row % 2 == 0 ? UIColor.whiteColor() : UIColor(red: 0, green: 0, blue: 0, alpha: 0.05)
+      return cell
+    }
+    
+    UserViewModel.getUsers()
+      .bindTo(tableView.rx_itemsWithDataSource(dataSource))
+      .addDisposableTo(disposeBag)
   }
 
   override func didReceiveMemoryWarning() {
