@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Route {
+struct Route {
   var title: String
   var photoURL: String
   

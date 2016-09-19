@@ -9,22 +9,29 @@
 import Foundation
 
 public class RoutesListViewModel {
-  
-  init() {
-    
-  }
-  
-  func loadPopularRoutes(completionHandler: @escaping ([RouteViewModel]) -> Void ){
-    var popular = [RouteViewModel]()
-    
+
+  let popular: [RouteViewModel] = {
     RouteAPIManager.sharedInstance.popular() {
       response in
       
+      var routes : [RouteViewModel]
+      
       for route in response {
-        popular.append(RouteViewModel(route: route))
+        print(route)
+        routes.append(RouteViewModel(route: route))
       }
-      completionHandler(popular)
+      
+      
     }
+  }
+  
+  init() {
+
+  }
+  
+  func loadPopularRoutes() {
+    
+    
   }
   
   public struct Tile {

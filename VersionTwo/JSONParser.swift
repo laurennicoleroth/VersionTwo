@@ -21,4 +21,5 @@ class JSONParser: NSObject {
     
     return resultRoutes
   }
+
 }
