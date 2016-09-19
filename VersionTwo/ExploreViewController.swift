@@ -12,13 +12,11 @@ import SwiftLocation
 class ExploreViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
   @IBOutlet weak var exploreTableView: UITableView!
-  
-  var routes = RoutesListViewModel().popularRoutes
 
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    debugPrint(routes)
+    let routeAPI = RouteAPIManager.sharedInstance
     
     self.exploreTableView.register(UITableViewCell.self, forCellReuseIdentifier: "RouteTileCell")
   }

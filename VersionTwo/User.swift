@@ -10,27 +10,31 @@ import Foundation
 import CoreLocation
 import SwiftLocation
 
-class User {
-  let locationManager = CLLocationManager()
-  
-  static let currentUser : User = {
-    let instance = User()
-    return instance
-  }()
-  
-  init() {
-  
-  }
-  
-  func getLatestLocation() {
-    let locationRequst = Location.getLocation(withAccuracy: .block, frequency: .oneShot, timeout: 50, onSuccess: { (location) in
-  
-    }) { (lastValidLocation, error) in
-      //TODO: handle error
-      
-    }
-    
-    debugPrint(locationRequst)
-  }
+//class User {
+//  let locationManager = CLLocationManager()
+//  
+//  static let currentUser : User = {
+//    let instance = User()
+//    return instance
+//  }()
+//  
+//  init() {
+//  
+//  }
+//  
+//  func getLatestLocation() {
+//    let locationRequst = Location.getLocation(withAccuracy: .block, frequency: .oneShot, timeout: 50, onSuccess: { (location) in
+//  
+//    }) { (lastValidLocation, error) in
+//      //TODO: handle error
+//      
+//    }
+//  }
+//
+//}
 
+struct User {
+  let followersCount: Int
+  let followingCount: Int
+  let screenName: String
 }
