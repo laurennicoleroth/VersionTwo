@@ -10,6 +10,11 @@ import Foundation
 
 class RouteViewModel {
   
+  private struct Constants {
+    static let baseURL = Config.sharedInstance.mobileAPIEndpoint()
+    static let suffix = "/routes/"
+  }
+  
   private var route: Route
   
   var titleText: String? {
