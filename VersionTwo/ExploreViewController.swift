@@ -13,21 +13,14 @@ import RxDataSources
 
 class ExploreViewController: UIViewController, UITableViewDelegate {
   
-  struct Reusable {
-    static let routeCell = ReusableCell<RouteCell>()
-  }
-
   @IBOutlet weak var exploreTableView: UITableView!
-  let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<Route>>()
-  let userViewModel = UserViewModel()
-  let disposeBag = DisposeBag()
+  
 
   override func viewDidLoad() {
     super.viewDidLoad()
   
 //    self.exploreTableView.register(UITableViewCell.self, forCellReuseIdentifier: "RouteTileCell")
     
-
   }
 
   override func didReceiveMemoryWarning() {
