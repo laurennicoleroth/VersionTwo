@@ -7,8 +7,18 @@
 //
 
 import Foundation
+import SwiftyJSON
+import RxSwift
 
 class RouteViewModel {
+  
+  private struct Constants {
+    static let baseURL = Config.sharedInstance.mobileAPIEndpoint()
+    static let suffix = "/routes/"
+  }
+  
+  let disposeBag = DisposeBag()
+  var searchText = BehaviorSubject<String?>()
   
   private var route: Route
   
