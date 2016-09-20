@@ -16,6 +16,9 @@ target 'VersionTwo' do
       :branch => 'swift-3.0'
 
   pod 'SwiftLocation', '~> 1.1'
+  pod 'RxDataSources', '~> 1.0.0-beta.2'
+  pod 'RxSwift', '~> 3.0.0-beta.1'
+  pod 'RxCocoa', '~> 3.0.0-beta.1'
 
   target 'VersionTwoTests' do
     inherit! :search_paths
