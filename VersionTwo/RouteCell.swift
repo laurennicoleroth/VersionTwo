@@ -48,5 +48,7 @@ class RouteCell: BaseTableViewCell {
   
   func cellHeightThatFitsWidth(width: CGFloat, routeViewModel: RouteViewModel) -> CGFloat {
     let height = routeViewModel.titleText.heightThatFitsWidth(width - Metric.cellPadding * 2, font: Font.titleLabel, maximumNumberOfLines: Constant.titleLableNumberOfLines)
+    
+    return height + Metric.cellPadding * 2
   }
 }
